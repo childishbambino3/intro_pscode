@@ -1,4 +1,21 @@
-# Client Task A #
-# Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+BEGIN GuessTheNumberGame
+    GUESS secretNumber = RANDOM(1 to 100)
+    GUESS attempts = 3
 
+    WHILE attempts > 0 DO
+        PRINT "Guess a number between 1 and 100:"
+        INPUT playerGuess
+        
+        IF playerGuess = secretNumber THEN
+            PRINT "Congratulations! You guessed the number!"
+            BREAK
+        ELSE
+            PRINT "Wrong guess. Try again."
+            DECREMENT attempts
+        END IF
+    END WHILE
+    
+    IF attempts = 0 THEN
+        PRINT "Sorry, you've run out of attempts. The number was " + secretNumber
+    END IF
+END GuessTheNumberGame

@@ -1,4 +1,30 @@
-# Client Task B #
-# Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+START FindTheSpot
 
+  // Initialize starting position in large warehouse
+  SET currentX = 0
+  SET currentY = 0
+  SET targetX = [target location X coordinate]
+  SET targetY = [target location Y coordinate]
+
+  POST "You are at the starting position (0, 0). Move to find the package."
+
+  WHILE currentX != targetX OR currentY != targetY
+    PRINT "Enter your move (N, S, E, W):"
+    INPUT move
+
+    IF move == "N" THEN
+      INCREMENT currentY by 1
+    ELSE IF move == "S" THEN
+      DECREMENT currentY by 1
+    ELSE IF move == "E" THEN
+      INCREMENT currentX by 1
+    ELSE IF move == "W" THEN
+      DECREMENT currentX by 1
+    ELSE
+      POST "Invalid move. Please enter N, S, E, or W."
+
+    POST "Current position: (" + currentX + ", " + currentY + ")"
+
+  POST "You've reached the target at (" + targetX + ", " + targetY + ")!"
+
+END FindTheSpot

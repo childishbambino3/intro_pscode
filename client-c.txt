@@ -1,4 +1,9 @@
-# Client Task C #
-# Add your pseudocode to this file below this line: #
-# ------------------------------------------------- #
+START ProductPackageCounter
 
+  POST "Counting product packages"
+
+  // LOOP from 2 to 50, counting by twos
+  FOR packageCount FROM 2 TO 50 STEP 2
+    PRINT packageCount
+
+END ProductPackageCounter
